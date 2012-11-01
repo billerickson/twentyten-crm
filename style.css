@@ -1,0 +1,490 @@
+/*
+Theme Name: Twenty Ten CRM
+Theme URI: http://www.billerickson.net/twentyten-crm
+Description: Use WordPress for Customer Relationship Management 
+Author: Bill Erickson, Andrew Norcross, Jared Atchinson
+Author URI: http://www.billerickson.net/
+Template: twentyten
+Version: 1.2
+License: GPL
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+*/
+ 
+/* Table of Contents
+
+* Globals
+* General Page Stuff
+* Header
+* Posts
+* Single
+* Footer
+* Top Login Panel
+* Content Login Box
+* Misc
+
+*/
+
+@import url(../twentyten/style.css);
+
+body {
+    font-family: "Helvetica Neue",Arial,Helvetica,"Nimbus Sans L",sans-serif;
+}
+
+/* General Page Stuff
+------------------------------------------------------------ */
+#content {
+	font: 12px/1.6 Arial; 
+	margin-left: 0; 
+}
+
+#content h2 {
+	margin: 10px 0;
+}
+
+.one-column #content { 
+	margin: 0 auto; width: 100%; 
+}
+
+#main {
+    padding: 20px 0;
+}
+
+/* Header
+------------------------------------------------------------ */
+#header {
+	border-bottom: 2px solid #000000;
+
+}
+#site-title {
+	float: none;
+}
+
+/* Posts
+------------------------------------------------------------ */
+#content { 
+	float: none;
+}
+
+div.day { 
+	border-top: 1px solid #ccc; 
+	overflow: auto; 
+	padding: 0; 
+	margin-bottom: -1px; 
+	position: relative; 
+}
+
+#content h2.date { 
+	position: absolute; 
+	width: 70px; 
+	font-size: .9em; 
+	clear: both; 
+	color: #aaa; 
+	text-transform: uppercase; 
+	margin: 0; 
+	padding: 1em 0 0; 
+	line-height: 2.3em; 
+}
+
+div.post { 
+	float: left; 
+	clear: left; 
+	width: 574px; 
+	position: relative; 
+	left: 80px; 
+	border-bottom: 1px solid #ccc; 
+}
+
+.single div.post {
+	width: 100%;
+}
+
+div.post.status-private { 
+	background: #f9f9f9; 
+}
+.hentry { 
+	margin: 0; 
+}
+
+div.entry-content { 
+	margin: 1em 0 1em; 
+	padding: 0; 
+	line-height: 2em; 
+}
+
+h1 span.edit-link {
+	font-weight:normal;
+	font-size:10px;
+	color:#00F;
+	text-decoration:underline;
+}
+
+/* Single
+------------------------------------------------------------ */
+.single #content {float: left; margin-right: 0;}
+.single #content .post {left: 0; border-bottom: 0;}
+
+.single .post .notes {padding:0 50px;}
+.single ul.attach_list {list-style:none; padding:0; margin:0;}
+.single ul.attach_list li {float:left; display:block; width:100%;}
+.single ul.attach_list li a{float:left;}
+.single ul.attach_list li span {margin-left:5px;float:left; line-height:60px;}
+
+/* Dashboard */
+.row .item {width: 300px; margin-left: 20px; float: left;}
+.row .item.last {width: 280px;}
+.row .item li {padding-bottom: 5px;}
+#content .row .item .no-space {margin-bottom: 0;}
+
+
+/* Footer
+------------------------------------------------------------ */
+#colophon {
+    border-top: 2px solid #000000;
+    margin-top: -4px;
+    overflow: hidden;
+    padding: 10px 0 18px;
+}
+
+#footer #access {
+	margin-top:10px;
+}
+
+#site-info {
+    width: 400px;
+}
+
+#site-generator {
+    width: 400px;
+}
+
+#site-generator a.documentation {
+	background: none;
+	padding: 0 20px 0 0;
+	font-style: normal;
+}
+
+/* Top Login Panel
+------------------------------------------------------------ */
+#toppanel {
+	position: absolute;   /*Panel will overlap  content */
+	/*position: relative;*/   /*Panel will "push" the content down */
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 130%; /* font-size set to 130% for the default Kubrick Wordpress theme */
+}
+
+#panel {
+	width: 100%;
+	height: 180px;
+	color: #999999;
+	background: #272727;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	display: none;
+}
+
+.logged-in #panel {
+	height:160px;
+}
+
+#panel h1 {
+	font-size: 1.6em;
+	padding: 5px 0 10px;
+	margin: 0;
+	color: white;
+	text-align: left;
+}
+
+#panel h1 span.username {
+	text-transform:capitalize;
+}
+
+#panel h2{
+	font-size: 1.2em;
+	padding: 10px 0 5px;
+	margin: 0;
+	color: white;
+	text-align: left;
+}
+
+#panel p {
+	margin: 5px 0;
+	padding: 0;
+}
+
+#panel a {
+	text-decoration: none;
+	color: #15ADFF;
+}
+
+#panel a:hover {
+	color: white;
+}
+
+#panel a-lost-pwd {
+	display: block;
+	float: left;
+}
+
+#panel ul {
+	margin: 0 0 5px 0;
+	padding: 0;
+	line-height: 1.6em;
+	list-style: none;
+}
+
+#panel .content {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 5px;
+	text-align: left;
+	font-size: 0.85em;
+}
+
+#panel .content .left {
+	width: 288px;
+	float: left;
+	margin-bottom: 25px;
+	padding: 0 15px;
+	border-right: 1px solid #333;
+	min-height: 220px;
+}
+
+#panel .content .border {
+	border-left: 1px solid #333;
+}
+
+#panel .content .narrow {
+	width:120px !important;
+}
+
+#panel .content form {
+	margin: 0 0 10px 0;
+}
+
+#panel .content label {
+	float: left;
+	padding-top: 8px;
+	clear: both;
+	width: 280px;
+	display: block;
+}
+
+#panel .content input.field {
+	border: 1px #1A1A1A solid;
+	background: #414141;
+	margin-right: 5px;
+	margin-top: 4px;
+	width: 200px;
+	color: white;
+	height: 16px;
+}
+
+#panel .content input:focus.field {
+	background: #545454;
+}
+/* BUTTONS */
+/* Login and Register buttons */
+#panel .content input.bt_login,
+#panel .content input.bt_register {
+	display: block;
+	float: left;
+	clear: left;
+	height: 24px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+#panel .content input.bt_login {
+	width: 74px;
+	background: transparent url(images/bt_login.png) no-repeat 0 0;
+}
+
+#panel .content input.bt_register {
+	width: 94px;
+	color: white;
+	background: transparent url(images/bt_register.png) no-repeat 0 0;
+}
+
+#panel .lost-pwd {
+	display: block;
+	float:left;
+	clear: right;
+	padding: 15px 5px 0;
+	font-size: 0.95em;
+	text-decoration: underline;
+}
+/* Panel Tab/button */
+.tab {
+  	background: url(images/tab_b.png) repeat-x 0 0;
+	height: 42px;
+	position: relative;
+	top: 0;
+	z-index: 999;
+}
+
+.tab ul.login {
+	display: block;
+	position: relative;
+  	float: right;
+  	clear: right;
+  	height: 42px;
+	width: auto;
+  	font-weight: bold;
+	line-height: 42px;
+	margin: 0;
+	right: 150px;
+  	color: white;
+  	font-size: 80%;
+	text-align: center;
+}
+
+.tab ul.login li.left {
+  	background: url(images/tab_l.png) no-repeat left 0;
+  	height: 42px;
+	width: 30px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+.tab ul.login li.right {
+  	background: url(images/tab_r.png) no-repeat left 0;
+  	height: 42px;
+	width: 30px;
+	padding: 0;
+	margin: 0;
+  	display: block;
+	float: left;
+}
+
+.tab ul.login li {
+ 	text-align: left;
+  	padding: 0 6px;
+	display: block;
+	float: left;
+	height: 42px;
+  	background: url(images/tab_m.png) repeat-x 0 0;
+}
+
+.tab ul.login li.login {
+}
+
+.tab ul.login li a {
+	color: #15ADFF;
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+.tab ul.login li a:hover {
+	color: white;
+}
+
+.tab .sep {
+	color:#414141
+}
+
+.tab a.open, 
+.tab a.close {
+	height: 20px;
+	line-height: 20px !important;
+	padding-left: 30px !important;
+	cursor: pointer;
+	display: block;
+	width: 65px;
+	position: relative;
+	top: 11px;
+	text-decoration: none;
+}
+
+.tab a.open {background: url(images/bt_open.png) no-repeat left 0;}
+.tab a.close {background: url(images/bt_close.png) no-repeat left 0;}
+.tab a:hover.open {background: url(images/bt_open.png) no-repeat left -19px;}
+.tab a:hover.close {background: url(images/bt_close.png) no-repeat left -19px;}
+
+/* Content Login Box
+------------------------------------------------------------ */
+#login {
+	clear:both;
+	background:#fff;
+	width:500px;
+	margin:0 auto 50px;
+	padding:10px;
+	color:#000;
+	border:2px solid #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;		
+}
+
+#login h3 {
+	margin:0 0 7px 0;
+	font-size:22px;
+	font-variant:small-caps;
+	font-weight:bold;
+	text-align:center;
+}
+
+#login p {
+	font-size:16px;
+}
+
+#login p.lost {
+	text-align:center;
+	padding-top:30px;
+}
+
+#login label {
+	width:130px;
+	display:block;
+	float:left;
+	text-align:right;
+	padding-right:20px;
+	color:#000;
+}
+
+#login input {
+	width:auto;
+}
+
+#login input.button {
+	width:100px;
+	margin:0 auto;
+	display:block;
+}
+
+/* Misc
+------------------------------------------------------------ */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
